@@ -21,6 +21,7 @@ export const styles = StyleSheet.create({
   result: {
     color: 'white',
     fontSize: 60,
+    marginBottom: 10,
     textAlign: 'right',
   },
 });
