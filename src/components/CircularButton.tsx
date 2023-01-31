@@ -41,16 +41,16 @@ export const CircularButton = ({
 
 const styles = StyleSheet.create({
   button: {
-    height: 80,
-    width: 80,
     borderRadius: 40,
+    height: 80,
     justifyContent: 'center',
     marginHorizontal: 10,
+    width: 80,
   },
   buttonText: {
-    textAlign: 'center',
-    fontSize: 30,
     color: 'black',
+    fontSize: 30,
     fontWeight: '300',
+    textAlign: 'center',
   },
 });

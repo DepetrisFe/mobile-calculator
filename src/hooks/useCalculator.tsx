@@ -2,14 +2,14 @@ import {useState, useRef} from 'react';
 
 enum Operations {
   addition,
-  substraction,
-  multiplication,
   division,
+  multiplication,
+  substraction,
 }
 
 export const useCalculator = () => {
-  const [previousNumber, setPreviousNumber] = useState('0');
   const [number, setNumber] = useState('0');
+  const [previousNumber, setPreviousNumber] = useState('0');
   const lastOperation = useRef<Operations>();
 
   const clear = () => {
@@ -69,14 +69,17 @@ export const useCalculator = () => {
     changePreviousNumber();
     lastOperation.current = Operations.division;
   };
+
   const multiplicationBtn = () => {
     changePreviousNumber();
     lastOperation.current = Operations.multiplication;
   };
+
   const substractionBtn = () => {
     changePreviousNumber();
     lastOperation.current = Operations.substraction;
   };
+
   const additionBtn = () => {
     changePreviousNumber();
     lastOperation.current = Operations.addition;
@@ -101,6 +104,7 @@ export const useCalculator = () => {
         break;
     }
   };
+
   return {
     additionBtn,
     buildNumber,
